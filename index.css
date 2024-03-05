@@ -5,7 +5,7 @@ h1 {
   }
   body {
     font-family: Arial, sans-serif;
-    background-image: url("./music/img.jpg");
+    background-image: url("./audio/img.jpg");
     margin: 0;
     padding: 0;
     display: flex;
@@ -14,7 +14,7 @@ h1 {
     height: 100vh;
   }
   .music-player {
-    background-image: url("./music/network-connection.jpeg");
+    background-image: url("./audio/network-connection.jpeg");
     border-radius: 10px;
     padding: 20px;
     width: 400px;
@@ -55,7 +55,7 @@ h1 {
   #no{
     width:15px;
     text-align: right;
-    background-image: url("./music/network-connection.jpeg");
+    background-image: url("./audio/network-connection.jpeg");
     border: none;
     border-radius: 5px;
     color: chartreuse;
