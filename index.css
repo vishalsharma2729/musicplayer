@@ -18,7 +18,7 @@ body {
   border-radius: 10px;
   padding: 20px;
   width: 400px;
-  height: 230px;
+  height: 270px;
   text-align: center;
 }
 
@@ -56,7 +56,14 @@ audio {
   width: 15px;
   text-align: right;
   background-image: url("https://images.pexels.com/photos/956999/milky-way-starry-sky-night-sky-star-956999.jpeg?auto=compress&cs=tinysrgb&w=600");
+  border: none;
+  border-radius: 5px;
+  color: chartreuse;
+}
 
+#display {
+
+  background-image: url("https://images.pexels.com/photos/956999/milky-way-starry-sky-night-sky-star-956999.jpeg?auto=compress&cs=tinysrgb&w=600");
   border: none;
   border-radius: 5px;
   color: chartreuse;
