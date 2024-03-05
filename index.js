@@ -42,3 +42,5 @@ if(sum>0){
   pre.disabled = true;
 }
   }
+
+  
