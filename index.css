@@ -101,3 +101,19 @@ body, html {
 #list li {
   margin-bottom: 10px;
 }
+
+.bt{
+  cursor: pointer;
+  margin-top: 7px;
+  color: chartreuse;
+ border: none;
+  background-image: url("https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+}
+.btnadd{
+    cursor: pointer;
+    margin-top: 7px;
+    color:orange;
+   border: none;
+   background-image: url("https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+
+  }

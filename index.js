@@ -1,3 +1,4 @@
+let add =[]
 
 let val = 0;
 let nex = document.querySelector("#next");
@@ -7,7 +8,16 @@ let nex = document.querySelector("#next");
   let display = document.querySelector('#display');
   let ul = document.querySelector('#list');
   audio.addEventListener('ended', function() {
-    next()
+    if(add.length>0){
+       audio.src=`audio/${add[0]}`
+       display.value=add[0]
+     let ind=music.indexOf(`audio/${add[0]}`)
+       no.value=++ind
+       audio.play()
+       add.length=0;
+    }else{
+      next()
+    }
 });
   let music = [
     "audio/Hanuman Chalisa-(PagalWorld).mp3",
@@ -17,7 +27,8 @@ let nex = document.querySelector("#next");
     "audio/Meri Bheegi Bheegi Si Anamika 320 Kbps.mp3",
     "audio/Pal Pal Dil Ke Pas.mp3",
     "audio/Tune Jo Na Kaha (slowed + reverbed)(KoshalWorld.Com).mp3",
-    "audio/Bam Lahiri Shor In The City Original Motion Picturetrack 320 Kbps.mp3"
+    "audio/Bam Lahiri Shor In The City Original Motion Picturetrack 320 Kbps.mp3",
+    "audio/Bhaang Ragad Ke.mp3"
  ]
 
  let sum =0;
@@ -59,15 +70,25 @@ display.value = d[1]
   const song = (e)=>{
     audio.src =`audio/${e.target.innerHTML}`
     display.value = e.target.innerHTML
+    let n = e.target.className.split(" ")[1]
+    no.value=++n
     audio.play()
   }
 
+  
   for (let index = 0; index < music.length; index++) {
-    let btn = document.createElement("button")
-    btn.className="btn"
+    let playbtn = document.createElement("button")
+    let addbtn = document.createElement("button")
+    playbtn.className=`bt ${index}`
+    addbtn.innerText="Add to next"
+    addbtn.className="btnadd"
     let br = document.createElement("br")
 let d = music[index].split("/");
-btn.innerHTML = d[1]
-    ul.append(btn,br)
-    btn.addEventListener("click",song)
+playbtn.innerText = d[1]
+ul.append(playbtn,addbtn,br)
+playbtn.addEventListener("click",song);
+addbtn.addEventListener("click",function(){
+  add.length=0
+  add.push(d[1])
+     })
   }
