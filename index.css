@@ -94,7 +94,12 @@ body, html {
 
 .bt{
   cursor: pointer;
+  max-width: 20rem;
   color: chartreuse;
  border: none;
   background-image: url("https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+overflow: hidden;
 }
+
+
+

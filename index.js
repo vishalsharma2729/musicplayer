@@ -90,6 +90,7 @@ display.value = d[1]
     let br = document.createElement("br")
 let d = music[index].split("/");
 playbtn.innerText = d[1]
+// playbtn.classList.add("songname")
 ul.append(playbtn,addbtn,br)
 ul.classList.add("show")
 playbtn.addEventListener("click",song);
