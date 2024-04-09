@@ -7,6 +7,8 @@ let nex = document.querySelector("#next");
   let no = document.querySelector('#no');
   let display = document.querySelector('#display');
   let ul = document.querySelector('#list');
+  let listbtn = document.querySelector('#showbtn');
+
   audio.addEventListener('ended', function() {
     if(add.length>0){
        audio.src=`audio/${add[0]}`
@@ -75,6 +77,9 @@ display.value = d[1]
     audio.play()
   }
 
+  listbtn.addEventListener("click",()=>{
+    ul.classList.toggle("show")
+  })
   
   for (let index = 0; index < music.length; index++) {
     let playbtn = document.createElement("button")
@@ -86,6 +91,7 @@ display.value = d[1]
 let d = music[index].split("/");
 playbtn.innerText = d[1]
 ul.append(playbtn,addbtn,br)
+ul.classList.add("show")
 playbtn.addEventListener("click",song);
 addbtn.addEventListener("click",function(){
   add.length=0
