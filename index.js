@@ -25,12 +25,14 @@ let nex = document.querySelector("#next");
     "audio/Hanuman Chalisa-(PagalWorld).mp3",
     "audio/Ram-Aayenge(PaglaSongs).mp3",
     "audio/Bajrang Baan Lofi(PagalWorld.com.cm).mp3",
-    "audio/Allah Ke Bande Waisa Bhi Hota Hai Part 2 320 Kbps.mp3",
+    "audio/Allah Ke Bande 320 Kbps.mp3",
     "audio/Meri Bheegi Bheegi Si Anamika 320 Kbps.mp3",
     "audio/Pal Pal Dil Ke Pas.mp3",
-    "audio/Tune Jo Na Kaha (slowed + reverbed)(KoshalWorld.Com).mp3",
-    "audio/Bam Lahiri Shor In The City Original Motion Picturetrack 320 Kbps.mp3",
-    "audio/Bhaang Ragad Ke.mp3"
+    "audio/Tune Jo Na Kaha .mp3",
+    "audio/Bam Lahiri  320 Kbps.mp3",
+    "audio/Bhaang Ragad Ke.mp3",
+    "audio/Zaroori Tha_320(PagalWorld.com.sb).mp3",
+    "audio/Afreen-Afreen(PaglaSongs).mp3"
  ]
 
  let sum =0;
@@ -40,18 +42,28 @@ let d = music[sum].split("/");
 display.value = d[1]
 
   const next = ()=>{
+    if(add.length>0){
+      audio.src=`audio/${add[0]}`
+      display.value=add[0]
+    let ind=music.indexOf(`audio/${add[0]}`)
+      no.value=++ind
+      audio.play()
+      add.length=0;
+   }else{
+    
 if(sum<music.length-1){
-    audio.src=music[sum+=1]
-    no.value=sum+1;
-    let d = music[sum].split("/");
+  audio.src=music[sum+=1]
+  no.value=sum+1;
+  let d = music[sum].split("/");
 display.value = d[1]
-    audio.play();
-    pre.disabled = false;
-    pre.className="btn"
+  audio.play();
+  pre.disabled = false;
+  pre.className="btn"
 }else{
-  nex.disabled = true;
-  nex.className="butt";
+nex.disabled = true;
+nex.className="butt";
 }
+   }
   }
 
   const prev = ()=>{
@@ -90,7 +102,6 @@ display.value = d[1]
     let br = document.createElement("br")
 let d = music[index].split("/");
 playbtn.innerText = d[1]
-// playbtn.classList.add("songname")
 ul.append(playbtn,addbtn,br)
 ul.classList.add("show")
 playbtn.addEventListener("click",song);
